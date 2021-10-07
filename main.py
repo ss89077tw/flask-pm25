@@ -10,9 +10,9 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    name = 'Jerry'
     time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    return render_template('index.html', **locals())
+
+    return render_template('index.html', time=time)
 
 
 @app.route('/echarts')
@@ -45,13 +45,6 @@ if __name__ == '__main__':
     #     print(stock['分類'], stock['指數'])
 
     # return render_template('stock.html',**locals())
-
-
-@app.route('/test')
-def test():
-    return render_template('index.html')
-
-# Get 取值
 
 
 @app.route('/sum/x=<x>&y=<y>', methods=['GET'])
