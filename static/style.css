@@ -17,12 +17,13 @@ body{
 #container{
     font-size: 32px;
     margin: 10px;
+    text-align: center;
 }
 
 table {
     width: 80%;
     text-align: center;    
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 12px;
 }
 
@@ -33,6 +34,11 @@ th{
 
 tr{
     background-color: wheat;
+}
+
+td{
+    background-color: cadetblue;
+    color: white;
 }
 
 @media screen and (max-width:768px){
