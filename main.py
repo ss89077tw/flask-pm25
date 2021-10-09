@@ -8,13 +8,11 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/')
 @app.route('/index')
 def index():
     time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     return render_template('index.html', time=time)
-
 
 @app.route('/echarts')
 def echarts():
