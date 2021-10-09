@@ -57,7 +57,6 @@ def getTodayDate(name):
     print(datetime.now())
     # 字串
     return f'{name} 歡迎光臨<br/> {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
-    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
 if __name__ == '__main__':
