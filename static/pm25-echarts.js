@@ -29,6 +29,9 @@ $(document).ready(() => {
                             name: "PM2.5",
                             type: "bar",
                             data: datas['values'],
+                            itemStyle: {
+                                color: '#a90000'
+                              }
                         },
                     ],
                 };

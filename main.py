@@ -18,7 +18,7 @@ def index():
 # post函式
 
 
-@app.route('/pm25-data',methods=['GET', 'POST'])
+@app.route('/pm25-data', methods=['GET', 'POST'])
 def pm25_data():
     columns, datas = get_pm25()
     sites, values = [], []
@@ -27,8 +27,6 @@ def pm25_data():
         values.append(data[-1])
 
     data = {'sites': sites, 'values': values}
-
-    print(data['site'])
 
     return json.dumps(data,ensure_ascii=False)
 
