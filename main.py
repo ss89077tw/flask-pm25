@@ -14,6 +14,16 @@ def index():
 
     return render_template('index.html', time=time)
 
+
+@app.route('/pm25-echarts')
+def pm25_echarts():
+    columns, datas = get_pm25()
+    print(columns, datas)
+
+    return render_template('pm25-echarts.html')
+
+
+
 @app.route('/echarts')
 def echarts():
     return render_template('echarts.html', time=time)
