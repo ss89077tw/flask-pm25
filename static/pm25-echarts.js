@@ -10,7 +10,7 @@ $(document).ready(() => {
             url: "/pm25-data",
             type: "POST",
             datetype: "json",
-            success:(datas)=>{
+            success: (datas) => {
                 //指定圖表的配置項和資料
                 const option = {
                     title: {
