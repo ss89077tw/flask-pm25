@@ -3,6 +3,7 @@ from datetime import datetime
 
 from flask.templating import render_template
 from scrape.pm25 import get_pm25
+import json
 
 app = Flask(__name__)
 
@@ -14,12 +15,25 @@ def index():
 
     return render_template('index.html', time=time)
 
+# post函式
+
+
+@app.route('/pm25-data',methods=['POST'])
+def pm25_data():
+    columns, datas = get_pm25()
+    sites, values = [], []
+    for data in datas:
+        sites.append(data[0])
+        values.append(data[-1])
+
+    data = {'sites': sites, 'values': values}
+
+    return json.dumps(data,ensure_ascii=False)
 
 @app.route('/pm25-echarts')
 def pm25_echarts():
     columns, datas = get_pm25()
-    print(columns, datas)
-    sites,values=[],[]
+    sites, values = [], []
     for data in datas:
         sites.append(data[0])
         values.append(data[-1])
