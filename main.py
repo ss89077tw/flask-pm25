@@ -19,8 +19,14 @@ def index():
 def pm25_echarts():
     columns, datas = get_pm25()
     print(columns, datas)
+    sites,values=[],[]
+    for data in datas:
+        sites.append(data[0])
+        values.append(data[-1])
 
-    return render_template('pm25-echarts.html')
+    print(sites,values)
+
+    return render_template('pm25-echarts.html', sites=sites, values=values)
 
 
 
