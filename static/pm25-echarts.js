@@ -1,7 +1,7 @@
 const mainEl = document.getElementById("main");
 console.log(mainEl);
 let charts = echarts.init(mainEl);
-console.log(charts)
+console.log(charts);
 
 
 $(document).ready(() => {
@@ -9,7 +9,7 @@ $(document).ready(() => {
         {
             url: "/pm25-data",
             type: "POST",
-            datetype: "json",
+            dataType: "json",
             success: (datas) => {
                 //指定圖表的配置項和資料
                 const option = {
@@ -24,6 +24,7 @@ $(document).ready(() => {
                         data: datas['sites'],
                     },
                     yAxis: {},
+
                     series: [
                         {
                             name: "PM2.5",
@@ -31,18 +32,19 @@ $(document).ready(() => {
                             data: datas['values'],
                             itemStyle: {
                                 color: '#a90000'
-                              }
+                            }
                         },
                     ],
                 };
-                
-                charts.setOption(option)
 
+                charts.setOption(option);
             }
         }
-    )    
-});   
+    )
+});
 
-    
+
+
+
 
 

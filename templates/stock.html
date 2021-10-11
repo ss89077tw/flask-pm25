@@ -10,19 +10,13 @@
 
 <body>
     <h1>股市資訊</h1>
-    <!-- for stock in stocks:
-        print(stock['分類'], stock['指數']) -->
     <h3>目前時間:{{time}}</h3>
-    <h4>
-        {%for stock in stocks%}
-        <ul>
-            <li>分類:{{stock.分類}}</li>
-            <li>指數:{{stock.指數}}</li>
-        </ul>
-
-        {%endfor%}
-    </h4>
-
+    {%for stock in stocks%}
+    <ul>
+        <li>{{stock.分類}}</li>
+        <li>{{stock.指數}}</li>
+    </ul>
+    {%endfor%}
 </body>
 
 </html>

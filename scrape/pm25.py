@@ -8,7 +8,7 @@ def get_pm25(sort=False):
     columns = ['SiteName', 'County', 'Concentration']
     datas = df[columns].values.tolist()
     if sort:
-        datas = sorted(datas,key=lambda x: x[-1])
+        datas = sorted(datas, key=lambda x: x[-1])
 
     return columns, datas
 

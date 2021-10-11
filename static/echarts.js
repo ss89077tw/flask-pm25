@@ -1,9 +1,7 @@
 const mainEl = document.getElementById("main");
 console.log(mainEl);
-
 let charts = echarts.init(mainEl);
-
-console.log(charts)
+console.log(charts);
 
 //指定圖表的配置項和資料
 const option = {
@@ -121,4 +119,4 @@ const option = {
     ]
 };
 
-charts.setOption(option)
+charts.setOption(option);

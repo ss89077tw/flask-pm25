@@ -4,51 +4,39 @@
 }
 
 body{
+    background-color:rgb(253, 251, 247);
     padding: 20px;
-    background-color: thistle;
 }
 
 #banner{
     font-size: x-large;
-    margin: 10px auto;
-    text-align: center;
-}
-
-#container{
-    font-size: 32px;
     margin: 10px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container{
+    margin: 0 auto;
     text-align: center;
 }
 
-table {
+table{
     width: 80%;
-    text-align: center;    
+    text-align: center;
     margin: 20px auto;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 th{
     background-color: tomato;
-    color: white;    
-}
-
-tr{
-    background-color: wheat;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
 }
 
 td{
     background-color: cadetblue;
-    color: white;
-}
-
-@media screen and (max-width:768px){
-    
-    #banner{
-        font-size: 24px;
-        margin: 10px;
-    }
-
-    table {
-        width: 100%;
-    }
+    color:white;
 }
