@@ -18,7 +18,7 @@ def index():
 # post函式
 
 
-@app.route('/pm25-data',methods=['POST'])
+@app.route('/pm25-data',methods=['GET', 'POST'])
 def pm25_data():
     columns, datas = get_pm25()
     sites, values = [], []
@@ -28,20 +28,14 @@ def pm25_data():
 
     data = {'sites': sites, 'values': values}
 
+    print(data['site'])
+
     return json.dumps(data,ensure_ascii=False)
+
 
 @app.route('/pm25-echarts')
 def pm25_echarts():
-    columns, datas = get_pm25()
-    sites, values = [], []
-    for data in datas:
-        sites.append(data[0])
-        values.append(data[-1])
-
-    print(sites,values)
-
-    return render_template('pm25-echarts.html', sites=sites, values=values)
-
+    return render_template('pm25-echarts.html')
 
 
 @app.route('/echarts')
