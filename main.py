@@ -5,8 +5,6 @@ from flask.templating import render_template
 from scrape.pm25 import get_pm25
 import json
 
-# modify by remote ss89077tw
-
 app = Flask(__name__)
 
 
